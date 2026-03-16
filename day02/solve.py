@@ -9,7 +9,7 @@ def parse_game(line):
     game_part, pulls_part = line.split(': ')
     id = int(game_part.split()[1])
     pulls = map(parse_pull, pulls_part.split('; '))
-    return id, pulls
+    return id, tuple(pulls)
     
 def solve_part_1(input):
     cubes = (12, 13, 14)
